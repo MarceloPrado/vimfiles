@@ -1,5 +1,6 @@
 lua require('telescope').setup({defaults = {file_sorter = require('telescope.sorters').get_fzy_sorter}})
 
-nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
-nnoremap <leader>pf :lua require('telescope.builtin').find_files()<CR>
-nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
+" Find files using Telescope command-line sugar.
+nnoremap <C-p> <cmd>Telescope git_files theme=get_dropdown<cr>
+nnoremap <leader>ps <cmd>Telescope live_grep prompt_prefix=🔍 theme=get_dropdown<CR>
+

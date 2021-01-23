@@ -6,11 +6,21 @@ call plug#begin('~/.vim/plugged')
 
   " Other plugins
   Plug 'gruvbox-community/gruvbox'
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+  " Comment and uncomment line of codes
+  Plug 'tpope/vim-commentary'
 call plug#end()
 
 colorscheme gruvbox
 
 let mapleader = " "
+
+" Moves through multiple windows
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
