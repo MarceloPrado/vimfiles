@@ -1,3 +1,7 @@
+" Coc will install the missing extensions after coc.nvim service started
+let g:coc_global_extensions = ['coc-json', 'coc-prettier', 'coc-tsserver', 'coc-eslint']
+
+" Note: all the code below was copied from https://github.com/neoclide/coc.nvim
 " Give more space for displaying messages.
 set cmdheight=2
 
