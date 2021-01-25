@@ -23,3 +23,4 @@ set incsearch
 set termguicolors
 set scrolloff=8
 set signcolumn=yes
+
