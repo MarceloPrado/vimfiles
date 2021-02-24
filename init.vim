@@ -16,6 +16,8 @@ call plug#begin('~/.vim/plugged')
 
   " Elixir syntax highlighting
   Plug 'elixir-editors/vim-elixir'
+
+  Plug 'kassio/neoterm'
 call plug#end()
 
 colorscheme gruvbox
@@ -29,9 +31,15 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Resize windows
-nnoremap <leader>+ :vertical resize +15<CR>
-nnoremap <leader>- :vertical resize -15<CR>
-nnoremap <leader>= :wincmd =<CR>
+" nnoremap <leader>+ :resize +10<CR>
+" nnoremap <leader>- :resize -10<CR>
+" nnoremap <leader>+ :vertical resize -10<CR>
+" nnoremap <leader>v- :vertical resize +10<CR>
+" nnoremap <leader>= :wincmd =<CR>
+nnoremap <silent> <c-Up> :resize -1<CR>
+nnoremap <silent> <c-Down> :resize +1<CR>
+nnoremap <silent> <c-left> :vertical resize -1<CR>
+nnoremap <silent> <c-right> :vertical resize +1<CR>
 
 fun! TrimWhitespace()
   let l:save = winsaveview()

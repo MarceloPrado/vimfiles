@@ -24,3 +24,5 @@ set termguicolors
 set scrolloff=8
 set signcolumn=yes
 
+" Copy to system's clipboard
+set clipboard+=unnamedplus
