@@ -4,6 +4,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
 
+  " File tree: https://github.com/kyazdani42/nvim-tree.lua
+  Plug 'kyazdani42/nvim-web-devicons' " for file icons
+  Plug 'kyazdani42/nvim-tree.lua'
+
   " Other plugins
   Plug 'gruvbox-community/gruvbox'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,15 +35,15 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
 " Resize windows
-" nnoremap <leader>+ :resize +10<CR>
-" nnoremap <leader>- :resize -10<CR>
-" nnoremap <leader>+ :vertical resize -10<CR>
-" nnoremap <leader>v- :vertical resize +10<CR>
-" nnoremap <leader>= :wincmd =<CR>
-nnoremap <silent> <c-Up> :resize -1<CR>
-nnoremap <silent> <c-Down> :resize +1<CR>
-nnoremap <silent> <c-left> :vertical resize -1<CR>
-nnoremap <silent> <c-right> :vertical resize +1<CR>
+nnoremap <leader>= :wincmd =<CR>
+nnoremap <silent> <c-Up> :resize -5<CR>
+nnoremap <silent> <c-Down> :resize +5<CR>
+nnoremap <silent> <c-left> :vertical resize -5<CR>
+nnoremap <silent> <c-right> :vertical resize +5<CR>
+
+" Sent by CMD + S on iterm2, saves file
+noremap  <silent> <C-ss> :w<CR>
+inoremap <silent> <C-ss> <ESC>:w<CR>i
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
