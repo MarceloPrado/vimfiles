@@ -41,9 +41,13 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+
+" GoTo modificatinos (split and vertical)
+nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
+
 
 " Use K to show documentation in preview window.
 nnoremap <silent> gh :call <SID>show_documentation()<CR>

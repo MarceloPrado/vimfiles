@@ -2,6 +2,7 @@ lua require('telescope').setup({defaults = {file_sorter = require('telescope.sor
 
 " Find files using Telescope command-line sugar.
 nnoremap <C-p> <cmd>Telescope git_files theme=get_dropdown<cr>
+nnoremap <leader>pf <cmd>Telescope git_files theme=get_dropdown<cr>
 nnoremap <leader>ps <cmd>Telescope live_grep prompt_prefix=🔍 theme=get_dropdown<CR>
 nnoremap <leader>pb <cmd>Telescope buffers theme=get_dropdown<CR>
 
