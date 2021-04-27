@@ -21,6 +21,10 @@ call plug#begin('~/.vim/plugged')
   " Elixir syntax highlighting
   Plug 'elixir-editors/vim-elixir'
 
+  " TypeScript JSX highlighting
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
+
   Plug 'kassio/neoterm'
 call plug#end()
 
@@ -44,6 +48,9 @@ nnoremap <silent> <c-right> :vertical resize +5<CR>
 " Sent by CMD + S on iterm2, saves file
 noremap  <silent> <C-ss> :w<CR>
 inoremap <silent> <C-ss> <ESC>:w<CR>i
+
+" Set filetypes as typescriptreact
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
