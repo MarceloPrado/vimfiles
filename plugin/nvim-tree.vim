@@ -53,3 +53,6 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 
 " a list of groups can be found at `:help nvim_tree_highlight`
 " highlight NvimTreeFolderIcon guibg=blue
+
+autocmd BufEnter * if bufname() =~ "NvimTree" | set cursorline | endif
+

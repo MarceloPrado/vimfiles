@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
 
   " Other plugins
   Plug 'gruvbox-community/gruvbox'
+  Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
   Plug 'tpope/vim-fugitive'
@@ -25,10 +26,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
 
-  Plug 'kassio/neoterm'
+  " Snippets support
+  Plug 'SirVer/ultisnips'
+  Plug 'mlaursen/vim-react-snippets'
+
 call plug#end()
 
-colorscheme gruvbox
+colorscheme dracula
 
 let mapleader = " "
 

@@ -6,10 +6,10 @@ set smartindent
 
 set exrc
 set relativenumber
+set number
 set nohlsearch
 set hidden
 set noerrorbells
-set nu
 set nowrap
 set smartcase
 
