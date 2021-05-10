@@ -8,11 +8,13 @@ call plug#begin('~/.vim/plugged')
   Plug 'kyazdani42/nvim-web-devicons' " for file icons
   Plug 'kyazdani42/nvim-tree.lua'
 
-  " Other plugins
+  " Themes plugins
   Plug 'gruvbox-community/gruvbox'
   Plug 'dracula/vim', { 'as': 'dracula' }
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  Plug 'joshdick/onedark.vim'
 
+  " Other plugins
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'tpope/vim-fugitive'
   Plug 'vim-airline/vim-airline'
 
@@ -22,17 +24,14 @@ call plug#begin('~/.vim/plugged')
   " Elixir syntax highlighting
   Plug 'elixir-editors/vim-elixir'
 
-  " TypeScript JSX highlighting
+  " TypeScript JSX highlighting + Snippets
   Plug 'leafgarland/typescript-vim'
   Plug 'peitalin/vim-jsx-typescript'
-
-  " Snippets support
-  Plug 'SirVer/ultisnips'
   Plug 'mlaursen/vim-react-snippets'
-
 call plug#end()
 
-colorscheme dracula
+syntax on
+colorscheme onedark
 
 let mapleader = " "
 
