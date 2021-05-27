@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'gruvbox-community/gruvbox'
   Plug 'dracula/vim', { 'as': 'dracula' }
   Plug 'joshdick/onedark.vim'
+  Plug 'ayu-theme/ayu-vim'
 
   " Other plugins
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -31,15 +32,18 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 syntax on
-colorscheme onedark
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
+
+" colorscheme onedark
 
 let mapleader = " "
 
 " Moves through multiple windows
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
 
 " Resize windows
 nnoremap <leader>= :wincmd =<CR>
