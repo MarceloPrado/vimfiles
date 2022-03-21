@@ -26,3 +26,6 @@ set signcolumn=yes
 
 " Copy to system's clipboard
 set clipboard+=unnamedplus
+
+" Allow iterm scroll
+set mouse=a
